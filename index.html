@@ -3,402 +3,266 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Política de Privacidade — Hidratação Neonatal</title>
+  <title>Política de Privacidade</title>
+  <meta name="description" content="Política de Privacidade genérica para aplicativo que não coleta, armazena, transmite ou compartilha dados pessoais." />
   <style>
     :root {
       --azul: #1a3a6b;
-      --azul-med: #2563a8;
-      --azul-clr: #dbeafe;
-      --texto: #1e293b;
-      --cinza: #64748b;
-      --borda: #cbd5e1;
+      --azul-claro: #2563a8;
       --fundo: #e8f0fe;
-      --branco: #ffffff;
-      --verde: #166534;
-      --verde-bg: #dcfce7;
-      --amarelo: #854d0e;
-      --amarelo-bg: #fef9c3;
+      --card: #ffffff;
+      --texto: #1e293b;
+      --muted: #64748b;
+      --borda: #cbd5e1;
+      --alerta-bg: #fffbeb;
+      --alerta-borda: #facc15;
+      --alerta-texto: #78350f;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: "Segoe UI", Roboto, Arial, sans-serif;
       background: var(--fundo);
       color: var(--texto);
-      line-height: 1.65;
+      line-height: 1.7;
       padding: 24px 16px 48px;
     }
-
-    .page {
-      max-width: 880px;
-      margin: 0 auto;
-    }
-
+    main { max-width: 920px; margin: 0 auto; }
     header {
-      background: linear-gradient(135deg, var(--azul), var(--azul-med));
-      color: #fff;
-      border-radius: 22px;
-      padding: 28px 22px;
+      background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+      color: #ffffff;
+      border-radius: 24px;
+      padding: 32px 24px;
       box-shadow: 0 16px 34px rgba(18, 44, 73, 0.18);
       margin-bottom: 18px;
+      text-align: center;
     }
-
     header h1 {
       margin: 0;
-      font-size: clamp(1.65rem, 4vw, 2.35rem);
+      font-size: clamp(1.9rem, 5vw, 2.7rem);
       line-height: 1.15;
-      letter-spacing: -0.4px;
+      letter-spacing: -0.5px;
     }
-
-    header p {
-      margin: 10px 0 0;
-      opacity: 0.92;
-      font-size: 0.98rem;
-    }
-
-    .card {
-      background: var(--branco);
+    header p { margin: 10px 0 0; font-size: 1rem; opacity: 0.94; }
+    section {
+      background: var(--card);
       border: 1px solid var(--borda);
       border-radius: 18px;
       padding: 22px;
       margin: 14px 0;
       box-shadow: 0 8px 20px rgba(18, 44, 73, 0.08);
     }
-
-    h2 {
-      color: var(--azul);
-      font-size: 1.15rem;
-      margin: 0 0 10px;
-      line-height: 1.25;
+    h2 { color: var(--azul); font-size: 1.18rem; margin: 0 0 10px; line-height: 1.25; }
+    p { margin: 0 0 12px; }
+    ul { margin: 8px 0 12px; padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    strong { font-weight: 700; }
+    .aviso {
+      background: var(--alerta-bg);
+      border: 1.5px solid var(--alerta-borda);
+      color: var(--alerta-texto);
+      border-radius: 16px;
     }
-
-    h3 {
-      color: var(--azul);
-      font-size: 1rem;
-      margin: 16px 0 8px;
-    }
-
-    p {
-      margin: 0 0 12px;
-    }
-
-    ul {
-      margin-top: 8px;
-      padding-left: 22px;
-    }
-
-    li {
-      margin-bottom: 6px;
-    }
-
-    .badge {
-      display: inline-block;
-      border-radius: 999px;
-      padding: 6px 12px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      margin: 4px 8px 4px 0;
-      border: 1px solid transparent;
-    }
-
-    .badge-ok {
-      background: var(--verde-bg);
-      color: var(--verde);
-      border-color: #86efac;
-    }
-
-    .badge-warn {
-      background: var(--amarelo-bg);
-      color: var(--amarelo);
-      border-color: #fde047;
-    }
-
-    .summary-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 12px;
-    }
-
-    .summary-item {
-      border: 1px solid var(--borda);
-      border-radius: 14px;
-      padding: 14px;
-      background: #f8fbff;
-    }
-
-    .summary-item strong {
-      display: block;
-      color: var(--azul);
-      margin-bottom: 4px;
-    }
-
-    .small {
-      font-size: 0.92rem;
-      color: var(--cinza);
-    }
-
-    .footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: var(--cinza);
-      margin-top: 22px;
-    }
-
-    a {
-      color: var(--azul-med);
-      font-weight: 700;
-      word-break: break-word;
-    }
-
+    .aviso h2 { color: var(--alerta-texto); }
+    .rodape { text-align: center; color: var(--muted); font-size: 0.92rem; margin-top: 22px; }
     @media (max-width: 640px) {
-      body {
-        padding: 16px 12px 36px;
-      }
-
-      header,
-      .card {
-        border-radius: 16px;
-      }
-
-      .summary-grid {
-        grid-template-columns: 1fr;
-      }
+      body { padding: 16px 12px 36px; }
+      header, section { border-radius: 16px; }
+      section { padding: 18px; }
     }
-
     @media print {
-      body {
-        background: #fff;
-        padding: 0;
-      }
-
-      header,
-      .card {
-        box-shadow: none;
-      }
+      body { background: #ffffff; padding: 0; }
+      header, section { box-shadow: none; }
     }
   </style>
 </head>
 
 <body>
-  <main class="page">
+  <main>
     <header>
       <h1>Política de Privacidade</h1>
-      <p><strong>Aplicativo:</strong> Hidratação Neonatal</p>
-      <p><strong>Última atualização:</strong> 04 de junho de 2026</p>
+      <p>Última atualização: junho de 2026</p>
     </header>
 
-    <section class="card">
-      <h2>1. Resumo objetivo</h2>
-      <p>
-        O aplicativo <strong>Hidratação Neonatal</strong> é uma ferramenta de cálculo médico voltada ao apoio educacional
-        e à referência profissional no preparo por etapas de hidratação venosa neonatal, mistura de soluções glicosadas
-        e cálculo da Taxa de Infusão de Glicose.
-      </p>
-
-      <span class="badge badge-ok">Não coleta dados pessoais</span>
-      <span class="badge badge-ok">Não cria conta de usuário</span>
-      <span class="badge badge-ok">Não usa anúncios</span>
-      <span class="badge badge-ok">Não usa analytics</span>
-      <span class="badge badge-ok">Não compartilha dados</span>
-
-      <div class="summary-grid">
-        <div class="summary-item">
-          <strong>Dados inseridos no app</strong>
-          Peso de cálculo, número de etapas, volume, sódio, potássio, cálcio, concentrações de soluções glicosadas e outros parâmetros necessários aos cálculos.
-        </div>
-        <div class="summary-item">
-          <strong>Destino dos dados</strong>
-          Os dados são processados localmente no próprio dispositivo e não são enviados ao desenvolvedor ou a terceiros.
-        </div>
-      </div>
+    <section>
+      <h2>1. Introdução</h2>
+      <p>Esta Política de Privacidade descreve como este software trata as informações dos usuários.</p>
+      <p>O software foi desenvolvido para funcionar sem necessidade de cadastro, login, identificação pessoal, criação de conta ou envio de dados pessoais para servidores externos do desenvolvedor.</p>
+      <p>Ao utilizar este software, o usuário declara estar ciente dos termos desta Política de Privacidade.</p>
     </section>
 
-    <section class="card">
-      <h2>2. Quem é o responsável pelo aplicativo</h2>
-      <p>
-        O aplicativo é desenvolvido por <strong>Adão L. L. Couto</strong>.
-      </p>
-      <p>
-        Para dúvidas sobre esta Política de Privacidade, entre em contato pelo e-mail:
-        <a href="mailto:adaollc@gmail.com">adaollc@gmail.com</a>.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>3. Finalidade do aplicativo</h2>
-      <p>
-        O aplicativo tem finalidade <strong>educacional, acadêmica e de apoio à referência médica</strong>. Ele auxilia
-        na realização de cálculos relacionados à hidratação venosa neonatal, incluindo parâmetros como:
-      </p>
+    <section>
+      <h2>2. Coleta de informações</h2>
+      <p>Este software não coleta, armazena, transmite, vende, compartilha ou processa dados pessoais dos usuários.</p>
+      <p>Nenhuma informação pessoal identificável é solicitada ou coletada, incluindo, mas não se limitando a:</p>
       <ul>
-        <li>peso de cálculo;</li>
-        <li>número de etapas por dia;</li>
-        <li>volume em ml/kg/dia;</li>
-        <li>sódio, potássio e cálcio;</li>
-        <li>volume total por etapa;</li>
-        <li>osmolaridade estimada;</li>
-        <li>mistura de soluções glicosadas;</li>
-        <li>Taxa de Infusão de Glicose.</li>
+        <li>nome;</li>
+        <li>e-mail;</li>
+        <li>telefone;</li>
+        <li>endereço;</li>
+        <li>CPF ou outros documentos;</li>
+        <li>localização;</li>
+        <li>contatos;</li>
+        <li>fotografias;</li>
+        <li>arquivos pessoais;</li>
+        <li>dados biométricos;</li>
+        <li>informações financeiras;</li>
+        <li>identificadores pessoais do dispositivo;</li>
+        <li>dados de prontuário;</li>
+        <li>qualquer informação destinada a identificar diretamente uma pessoa.</li>
       </ul>
-      <p class="small">
-        O aplicativo não substitui julgamento clínico, anamnese, exame físico, protocolos institucionais nem a decisão
-        do profissional de saúde responsável pelo atendimento.
-      </p>
+      <p>As informações eventualmente digitadas pelo usuário nos campos do software são utilizadas apenas localmente, no próprio dispositivo, para permitir o funcionamento da ferramenta. Esses dados não são enviados ao desenvolvedor, não são armazenados em servidores e não são compartilhados com terceiros.</p>
     </section>
 
-    <section class="card">
-      <h2>4. Dados pessoais e dados de saúde</h2>
-      <p>
-        O aplicativo <strong>não solicita</strong> nome, CPF, endereço, telefone, e-mail, número de prontuário, fotografia,
-        localização, contato, identificador do dispositivo ou qualquer outro dado destinado a identificar diretamente um
-        paciente ou usuário.
-      </p>
-      <p>
-        Os valores clínicos inseridos servem exclusivamente para gerar os cálculos exibidos na tela. Esses valores podem
-        estar relacionados a um contexto de assistência neonatal, mas o aplicativo não foi projetado para registrar,
-        armazenar, transmitir ou compartilhar informações identificáveis de pacientes.
-      </p>
-      <p>
-        Recomenda-se que o usuário <strong>não insira dados identificáveis de pacientes</strong> em qualquer campo do app.
-      </p>
+    <section>
+      <h2>3. Dados de saúde e informações sensíveis</h2>
+      <p>Este software não solicita identificação de pacientes e não deve ser utilizado para registrar dados pessoais, dados de prontuário, nomes, documentos ou qualquer informação que permita identificar uma pessoa.</p>
+      <p>Caso o usuário insira parâmetros clínicos, valores, medidas, resultados ou informações relacionadas à saúde, esses dados serão processados apenas localmente no dispositivo, para fins de cálculo, consulta, referência ou apoio educacional.</p>
+      <p>O usuário é responsável por não inserir dados identificáveis de pacientes ou de terceiros.</p>
     </section>
 
-    <section class="card">
-      <h2>5. Coleta, uso e compartilhamento de dados</h2>
-
-      <h3>5.1 Coleta</h3>
-      <p>
-        O aplicativo não coleta dados pessoais do usuário nem dados pessoais de pacientes.
-      </p>
-
-      <h3>5.2 Uso</h3>
-      <p>
-        Os dados digitados são usados apenas para executar os cálculos dentro do próprio aplicativo.
-      </p>
-
-      <h3>5.3 Compartilhamento</h3>
-      <p>
-        O aplicativo não compartilha dados com o desenvolvedor, com anunciantes, com plataformas de análise, com serviços
-        em nuvem ou com terceiros.
-      </p>
-
-      <h3>5.4 Venda de dados</h3>
-      <p>
-        O aplicativo não vende dados pessoais.
-      </p>
+    <section>
+      <h2>4. Uso das informações</h2>
+      <p>Como o software não coleta dados pessoais, não há uso de informações pessoais pelo desenvolvedor.</p>
+      <p>Os dados digitados pelo usuário, quando existirem, são utilizados exclusivamente para:</p>
+      <ul>
+        <li>executar cálculos internos;</li>
+        <li>exibir resultados na tela;</li>
+        <li>permitir a interação com a ferramenta;</li>
+        <li>auxiliar em consulta, estudo, conferência ou referência.</li>
+      </ul>
+      <p>Essas informações não são transmitidas, analisadas, monitoradas ou utilizadas para criação de perfil do usuário.</p>
     </section>
 
-    <section class="card">
-      <h2>6. Armazenamento e retenção</h2>
-      <p>
-        O aplicativo não possui sistema de cadastro, banco de dados remoto, conta de usuário ou armazenamento intencional
-        persistente dos parâmetros digitados.
-      </p>
-      <p>
-        Os valores inseridos ficam disponíveis apenas para o uso local durante a interação com o aplicativo. O usuário pode
-        apagar os campos usando o botão <strong>“Limpar Dados”</strong> ou encerrando o aplicativo.
-      </p>
+    <section>
+      <h2>5. Armazenamento de dados</h2>
+      <p>Este software não possui sistema próprio de armazenamento remoto de dados pessoais.</p>
+      <p>Não há banco de dados externo, conta de usuário, área de login ou servidor do desenvolvedor destinado a guardar informações pessoais.</p>
+      <p>Os dados inseridos durante o uso permanecem apenas na sessão local do aplicativo ou da página, conforme o funcionamento do dispositivo e do sistema operacional. O usuário pode limpar os campos, fechar o aplicativo ou reiniciar a ferramenta para remover as informações exibidas na tela.</p>
     </section>
 
-    <section class="card">
-      <h2>7. Permissões do dispositivo</h2>
-      <p>
-        A versão descrita nesta política não requer acesso a câmera, microfone, localização, contatos, arquivos pessoais,
-        fotos, telefone, SMS ou sensores sensíveis do dispositivo.
-      </p>
-      <p>
-        Caso uma versão futura do aplicativo passe a solicitar alguma permissão adicional, esta Política de Privacidade
-        deverá ser atualizada antes da publicação ou atualização na loja.
-      </p>
+    <section>
+      <h2>6. Compartilhamento de dados</h2>
+      <p>Este software não compartilha dados pessoais com terceiros.</p>
+      <p>Não há compartilhamento com:</p>
+      <ul>
+        <li>anunciantes;</li>
+        <li>empresas parceiras;</li>
+        <li>plataformas de marketing;</li>
+        <li>serviços de análise comportamental;</li>
+        <li>redes sociais;</li>
+        <li>bancos de dados externos;</li>
+        <li>servidores próprios do desenvolvedor;</li>
+        <li>qualquer outro terceiro para fins comerciais.</li>
+      </ul>
+      <p>Também não há venda, aluguel, cessão ou transferência de dados pessoais.</p>
     </section>
 
-    <section class="card">
-      <h2>8. Cookies, anúncios, analytics e SDKs de terceiros</h2>
-      <p>
-        O aplicativo não utiliza cookies, rastreadores, anúncios, Google Analytics, Firebase Analytics, AdMob ou SDKs de
-        terceiros para coleta de dados.
-      </p>
-      <p>
-        Se uma versão futura incluir qualquer serviço de terceiros, esta política deverá ser revisada para informar quais
-        dados serão acessados, coletados, usados e compartilhados.
-      </p>
+    <section>
+      <h2>7. Publicidade</h2>
+      <p>Este software não utiliza anúncios personalizados.</p>
+      <p>O software não coleta dados para publicidade, não cria perfil de usuário e não utiliza identificadores de publicidade para rastreamento.</p>
+      <p>Caso uma versão futura venha a utilizar anúncios, esta Política de Privacidade deverá ser atualizada antes da disponibilização dessa versão.</p>
     </section>
 
-    <section class="card">
-      <h2>9. Segurança</h2>
-      <p>
-        Como o aplicativo processa os cálculos localmente e não transmite dados ao desenvolvedor ou a terceiros, o risco
-        de exposição por transmissão externa é reduzido.
-      </p>
-      <p>
-        Ainda assim, a segurança dos dados exibidos na tela depende também das práticas do próprio usuário, como manter o
-        dispositivo protegido por senha, biometria ou outro mecanismo de bloqueio.
-      </p>
+    <section>
+      <h2>8. Cookies e tecnologias de rastreamento</h2>
+      <p>Este software não utiliza cookies, pixels, beacons, scripts de rastreamento ou tecnologias semelhantes para monitorar o comportamento dos usuários.</p>
+      <p>Não há rastreamento de navegação, monitoramento de telas acessadas, criação de perfil comportamental ou coleta de estatísticas pessoais de uso pelo desenvolvedor.</p>
     </section>
 
-    <section class="card">
-      <h2>10. Crianças e público-alvo</h2>
-      <p>
-        Embora o conteúdo do aplicativo se relacione à neonatologia, o app <strong>não é direcionado a crianças</strong>.
-        Ele é destinado a profissionais de saúde, estudantes da área da saúde e usuários habilitados ou supervisionados
-        para interpretar cálculos clínicos.
-      </p>
+    <section>
+      <h2>9. Analytics e relatórios de uso</h2>
+      <p>Este software não utiliza ferramentas de analytics, métricas de uso, rastreamento de eventos ou relatórios automáticos de comportamento do usuário.</p>
+      <p>O desenvolvedor não recebe informações sobre quais campos foram preenchidos, quais cálculos foram realizados, quanto tempo o usuário permaneceu no aplicativo ou quais telas foram acessadas.</p>
+      <p>Caso uma versão futura utilize ferramentas de diagnóstico, estatística ou relatório de falhas, esta Política de Privacidade deverá ser atualizada para informar claramente quais dados serão tratados.</p>
     </section>
 
-    <section class="card">
-      <h2>11. Exclusão de dados</h2>
-      <p>
-        Como o aplicativo não cria conta de usuário e não armazena dados pessoais em servidor, não há dados pessoais
-        mantidos pelo desenvolvedor para serem excluídos.
-      </p>
-      <p>
-        Para apagar informações digitadas durante o uso, utilize o botão <strong>“Limpar Dados”</strong> ou feche o
-        aplicativo.
-      </p>
+    <section>
+      <h2>10. Permissões do dispositivo</h2>
+      <p>Este software não solicita permissões sensíveis do dispositivo para coleta de informações pessoais.</p>
+      <p>O software não acessa, para fins de coleta de dados pessoais:</p>
+      <ul>
+        <li>câmera;</li>
+        <li>microfone;</li>
+        <li>localização;</li>
+        <li>contatos;</li>
+        <li>fotos;</li>
+        <li>vídeos;</li>
+        <li>arquivos pessoais;</li>
+        <li>mensagens;</li>
+        <li>chamadas;</li>
+        <li>sensores biométricos;</li>
+        <li>armazenamento externo com finalidade de coleta de dados.</li>
+      </ul>
+      <p>Caso alguma permissão seja necessária para funcionamento técnico específico em versão futura, ela deverá ser usada apenas para a finalidade informada e esta Política de Privacidade deverá ser atualizada.</p>
     </section>
 
-    <section class="card">
-      <h2>12. Alterações nesta política</h2>
-      <p>
-        Esta Política de Privacidade poderá ser atualizada para refletir mudanças no aplicativo, em suas funcionalidades,
-        em requisitos legais ou em exigências da Google Play Store.
-      </p>
-      <p>
-        A data da última atualização será sempre indicada no início desta página.
-      </p>
+    <section>
+      <h2>11. Serviços de terceiros</h2>
+      <p>Este software não envia dados pessoais para serviços de terceiros controlados pelo desenvolvedor.</p>
+      <p>Entretanto, o uso do aplicativo por meio de lojas de aplicativos, sistemas operacionais ou dispositivos móveis pode envolver serviços externos independentes, como a própria loja de aplicativos, o sistema operacional ou mecanismos de segurança do dispositivo. Esses serviços seguem suas próprias políticas de privacidade, fora do controle direto do desenvolvedor deste software.</p>
+      <p>Esta Política de Privacidade refere-se exclusivamente ao funcionamento do software em si.</p>
     </section>
 
-    <section class="card">
-      <h2>13. Aviso médico e limitação de responsabilidade</h2>
-      <p>
-        Este aplicativo é uma ferramenta auxiliar. Ele não substitui o julgamento clínico individual, protocolos
-        institucionais, validação farmacêutica, conferência da prescrição ou responsabilidade do profissional assistente.
-      </p>
-      <p>
-        As informações geradas devem ser revisadas antes de qualquer decisão clínica. A responsabilidade final por
-        prescrição, conduta ou intervenção é exclusivamente do profissional de saúde responsável pelo paciente.
-      </p>
+    <section>
+      <h2>12. Segurança</h2>
+      <p>Como este software não coleta, transmite ou armazena dados pessoais em servidores do desenvolvedor, o risco de exposição por transmissão externa é reduzido.</p>
+      <p>Ainda assim, a segurança das informações exibidas na tela depende também das práticas do próprio usuário, incluindo:</p>
+      <ul>
+        <li>manter o dispositivo protegido por senha, biometria ou outro mecanismo de bloqueio;</li>
+        <li>evitar inserir dados pessoais identificáveis;</li>
+        <li>não compartilhar capturas de tela contendo informações sensíveis;</li>
+        <li>manter o sistema operacional atualizado;</li>
+        <li>utilizar apenas versões oficiais do software.</li>
+      </ul>
+      <p>O desenvolvedor não se responsabiliza por exposição de informações causada por uso inadequado do dispositivo, compartilhamento voluntário de dados pelo usuário ou instalação de versões não oficiais.</p>
     </section>
 
-    <section class="card">
-      <h2>14. Contato</h2>
-      <p>
-        Em caso de dúvidas, solicitações ou necessidade de esclarecimento sobre privacidade, entre em contato:
-      </p>
-      <p>
-        <strong>Desenvolvedor:</strong> Adão L. L. Couto<br />
-        <strong>E-mail:</strong> <a href="mailto:adaollc@gmail.com">adaollc@gmail.com</a>
-      </p>
+    <section>
+      <h2>13. Crianças e adolescentes</h2>
+      <p>Este software não coleta intencionalmente informações de crianças, adolescentes ou quaisquer outros usuários.</p>
+      <p>O software não possui recursos de cadastro, mensagens, perfil público, interação social ou coleta de dados pessoais de menores de idade.</p>
+      <p>Caso o software seja utilizado por menores, recomenda-se supervisão de pais, responsáveis ou profissionais habilitados, conforme a natureza do conteúdo apresentado.</p>
     </section>
 
-    <p class="footer">
-      Política de Privacidade — Hidratação Neonatal<br />
-      Desenvolvido por Adão L. L. Couto
+    <section>
+      <h2>14. Direitos do usuário</h2>
+      <p>Como o software não coleta nem armazena dados pessoais em servidores do desenvolvedor, não há banco de dados pessoal mantido pelo desenvolvedor para consulta, correção, portabilidade ou exclusão.</p>
+      <p>Ainda assim, o usuário pode entrar em contato para esclarecer dúvidas sobre privacidade, funcionamento do software ou tratamento de informações.</p>
+      <p>Quando aplicável, o usuário poderá solicitar informações sobre eventual tratamento de dados pessoais, conforme a legislação vigente.</p>
+    </section>
+
+    <section>
+      <h2>15. Exclusão de dados</h2>
+      <p>Este software não possui conta de usuário nem armazenamento remoto de dados pessoais.</p>
+      <p>Portanto, não há conta ou banco de dados pessoal mantido pelo desenvolvedor para exclusão.</p>
+      <p>Para remover informações digitadas durante o uso, o usuário pode limpar os campos, fechar o aplicativo ou apagar os dados locais do aplicativo nas configurações do dispositivo, quando aplicável.</p>
+    </section>
+
+    <section>
+      <h2>16. Alterações desta Política de Privacidade</h2>
+      <p>Esta Política de Privacidade poderá ser atualizada periodicamente para refletir mudanças no funcionamento do software, em exigências legais, em políticas de lojas de aplicativos ou em recursos eventualmente adicionados.</p>
+      <p>Caso futuras versões passem a coletar, armazenar, transmitir ou compartilhar qualquer tipo de dado pessoal, esta política deverá ser revisada antes da disponibilização da nova versão.</p>
+      <p>A versão mais recente desta Política de Privacidade deverá estar sempre disponível em local acessível ao usuário.</p>
+    </section>
+
+    <section class="aviso">
+      <h2>17. Aviso Legal e Isenção de Responsabilidade</h2>
+      <p>Este software e todas as informações nele contidas são fornecidos exclusivamente com propósitos educacionais e de auxílio à referência médica. ESTE SISTEMA NÃO SUBSTITUI O JULGAMENTO CLÍNICO INDIVIDUAL, A ANAMNESE E O EXAME FÍSICO. As informações aqui apresentadas não devem ser utilizadas isoladamente para o diagnóstico, conduta ou tratamento de pacientes. A responsabilidade final por qualquer decisão clínica, prescrição ou intervenção é exclusiva do profissional de saúde assistente, devidamente habilitado.</p>
+      <p>Os desenvolvedores não garantem a precisão absoluta de todos os dados e isentam-se de responsabilidade por quaisquer danos diretos, indiretos, materiais ou morais que resultem do uso inadequado, interpretação equivocada ou confiança exclusiva nas informações deste sistema.</p>
+      <p>Pacientes e indivíduos leigos que utilizarem este software devem sempre buscar a orientação de um médico qualificado antes de tomar qualquer decisão sobre sua saúde.</p>
+    </section>
+
+    <section>
+      <h2>18. Contato</h2>
+      <p>Em caso de dúvidas sobre esta Política de Privacidade, privacidade de dados ou funcionamento do software, o usuário poderá entrar em contato pelo e-mail informado na página do desenvolvedor ou na loja de aplicativos.</p>
+    </section>
+
+    <p class="rodape">
+      Política de Privacidade<br />
+      Última atualização: junho de 2026
     </p>
   </main>
 </body>
