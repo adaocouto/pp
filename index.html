@@ -3,266 +3,470 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Política de Privacidade</title>
-  <meta name="description" content="Política de Privacidade genérica para aplicativo que não coleta, armazena, transmite ou compartilha dados pessoais." />
+  <title>Política de Privacidade — Aplicativos de Adão L. L. Couto</title>
+  <meta name="description" content="Política de Privacidade dos aplicativos desenvolvidos por Adão L. L. Couto. Os aplicativos processam dados localmente e não coletam, transmitem ou compartilham dados pessoais." />
+  <meta name="author" content="Adão L. L. Couto" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://adaocouto.github.io/pp/" />
   <style>
     :root {
-      --azul: #1a3a6b;
-      --azul-claro: #2563a8;
-      --fundo: #e8f0fe;
+      --bg: #eef4fb;
       --card: #ffffff;
-      --texto: #1e293b;
-      --muted: #64748b;
-      --borda: #cbd5e1;
-      --alerta-bg: #fffbeb;
-      --alerta-borda: #facc15;
-      --alerta-texto: #78350f;
+      --text: #17324d;
+      --muted: #5e7288;
+      --primary: #1a3a6b;
+      --primary-2: #2563a8;
+      --border: #cddbea;
+      --soft: #eaf4ff;
+      --warn-bg: #fffbeb;
+      --warn-border: #facc15;
+      --warn-text: #78350f;
+      --danger-bg: #fff2f2;
+      --danger-border: #f1c2c2;
+      --danger-text: #8d2323;
+      --shadow: 0 10px 28px rgba(23, 50, 77, 0.08);
     }
+
     * { box-sizing: border-box; }
+
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
-      background: var(--fundo);
-      color: var(--texto);
-      line-height: 1.7;
-      padding: 24px 16px 48px;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #eef4fb 0%, #f8fbff 100%);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 20px 14px 44px;
     }
-    main { max-width: 920px; margin: 0 auto; }
+
+    main {
+      width: min(980px, 100%);
+      margin: 0 auto;
+    }
+
     header {
-      background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
       color: #ffffff;
       border-radius: 24px;
-      padding: 32px 24px;
-      box-shadow: 0 16px 34px rgba(18, 44, 73, 0.18);
-      margin-bottom: 18px;
+      padding: 32px 22px;
       text-align: center;
+      box-shadow: var(--shadow);
+      margin-bottom: 16px;
     }
+
     header h1 {
       margin: 0;
       font-size: clamp(1.9rem, 5vw, 2.7rem);
-      line-height: 1.15;
+      line-height: 1.1;
       letter-spacing: -0.5px;
     }
-    header p { margin: 10px 0 0; font-size: 1rem; opacity: 0.94; }
+
+    header p {
+      margin: 10px 0 0;
+      opacity: 0.94;
+      font-size: 1rem;
+    }
+
     section {
       background: var(--card);
-      border: 1px solid var(--borda);
+      border: 1px solid var(--border);
       border-radius: 18px;
+      box-shadow: var(--shadow);
       padding: 22px;
       margin: 14px 0;
-      box-shadow: 0 8px 20px rgba(18, 44, 73, 0.08);
     }
-    h2 { color: var(--azul); font-size: 1.18rem; margin: 0 0 10px; line-height: 1.25; }
+
+    h2 {
+      color: var(--primary);
+      font-size: 1.16rem;
+      line-height: 1.25;
+      margin: 0 0 10px;
+    }
+
     p { margin: 0 0 12px; }
-    ul { margin: 8px 0 12px; padding-left: 22px; }
-    li { margin-bottom: 6px; }
-    strong { font-weight: 700; }
-    .aviso {
-      background: var(--alerta-bg);
-      border: 1.5px solid var(--alerta-borda);
-      color: var(--alerta-texto);
-      border-radius: 16px;
+
+    ul {
+      margin: 8px 0 12px;
+      padding-left: 22px;
     }
-    .aviso h2 { color: var(--alerta-texto); }
-    .rodape { text-align: center; color: var(--muted); font-size: 0.92rem; margin-top: 22px; }
+
+    li { margin-bottom: 6px; }
+
+    strong { font-weight: 700; }
+
+    a {
+      color: var(--primary-2);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+      overflow-wrap: anywhere;
+    }
+
+    code {
+      background: #edf3f9;
+      border: 1px solid #dbe7f2;
+      border-radius: 5px;
+      padding: 1px 5px;
+      color: #294a68;
+      overflow-wrap: anywhere;
+    }
+
+    .summary {
+      background: var(--soft);
+      border-color: #bfdbfe;
+    }
+
+    .warning {
+      background: var(--warn-bg);
+      border-color: var(--warn-border);
+      color: var(--warn-text);
+    }
+
+    .warning h2 { color: var(--warn-text); }
+
+    .disclaimer {
+      background: var(--danger-bg);
+      border-color: var(--danger-border);
+      color: var(--danger-text);
+    }
+
+    .disclaimer h2 { color: var(--danger-text); }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-top: 22px;
+    }
+
     @media (max-width: 640px) {
-      body { padding: 16px 12px 36px; }
+      body { padding: 14px 10px 34px; }
       header, section { border-radius: 16px; }
       section { padding: 18px; }
     }
+
     @media print {
       body { background: #ffffff; padding: 0; }
       header, section { box-shadow: none; }
     }
   </style>
 </head>
-
 <body>
   <main>
     <header>
       <h1>Política de Privacidade</h1>
-      <p>Última atualização: junho de 2026</p>
+      <p>Aplicativos desenvolvidos por <strong>Adão L. L. Couto</strong></p>
+      <p>Última atualização: 25 de agosto de 2026</p>
     </header>
 
-    <section>
-      <h2>1. Introdução</h2>
-      <p>Esta Política de Privacidade descreve como este software trata as informações dos usuários.</p>
-      <p>O software foi desenvolvido para funcionar sem necessidade de cadastro, login, identificação pessoal, criação de conta ou envio de dados pessoais para servidores externos do desenvolvedor.</p>
-      <p>Ao utilizar este software, o usuário declara estar ciente dos termos desta Política de Privacidade.</p>
+    <section class="summary">
+      <h2>Resumo</h2>
+      <p>
+        Esta Política de Privacidade aplica-se aos aplicativos desenvolvidos por <strong>Adão L. L. Couto</strong> e expressamente listados nesta página, quando disponibilizados por este desenvolvedor no Google Play.
+      </p>
+      <p>
+        O software funciona como ferramenta educacional, de consulta, cálculo ou apoio à referência médica. Ele não exige cadastro,
+        login, criação de conta ou identificação pessoal do usuário.
+      </p>
+      <p>
+        O software não coleta, transmite, vende, armazena em servidores do desenvolvedor ou compartilha dados pessoais. Informações
+        eventualmente digitadas pelo usuário são processadas localmente, no próprio dispositivo, apenas para exibição de resultados
+        e funcionamento da ferramenta.
+      </p>
     </section>
 
     <section>
-      <h2>2. Coleta de informações</h2>
-      <p>Este software não coleta, armazena, transmite, vende, compartilha ou processa dados pessoais dos usuários.</p>
-      <p>Nenhuma informação pessoal identificável é solicitada ou coletada, incluindo, mas não se limitando a:</p>
+      <h2>Aplicativos abrangidos por esta Política de Privacidade</h2>
+      <p>
+        Esta política aplica-se aos seguintes aplicativos desenvolvidos por <strong>Adão L. L. Couto</strong>:
+      </p>
+      <ul>
+        <li><strong>Hidratação Neonatal</strong> — <code>com.adaocouto.hidra</code></li>
+        <li><strong>CDAB</strong> — <code>com.adaocouto.cdab</code></li>
+        <li><strong>Clearance Estimado</strong> — <code>com.adaocouto.clearance</code></li>
+        <li><strong>Conversor Laboratorial</strong> — <code>com.adaocouto.convlab</code></li>
+        <li><strong>Doses na PCR Pediátrica</strong> — <code>com.adaocouto.paraped</code></li>
+        <li><strong>Escala de Apgar</strong> — <code>com.adaocouto.apgar</code></li>
+        <li><strong>Glasgow Pediátrico</strong> — <code>com.adaocouto.glasgow</code></li>
+        <li><strong>Hidratação Isotônica</strong> — <code>com.adaocouto.hviso</code></li>
+        <li><strong>Hidratação Venosa Neonatal</strong> — <code>com.adaocouto.hvneo</code></li>
+        <li><strong>Idade Gestacional pelo Ballard</strong> — <code>com.adaocouto.ballard</code></li>
+        <li><strong>PlanoC</strong> — <code>com.adaocouto.planoc</code></li>
+        <li><strong>Preparo de Soluções</strong> — <code>com.adaocouto.preparo</code></li>
+      </ul>
+      <p>
+        A identificação pelos nomes e pelos respectivos IDs de pacote torna explícito quais aplicativos estão cobertos por esta política.
+      </p>
+    </section>
+
+    <section>
+      <h2>1. Introdução</h2>
+      <p>
+        Esta Política de Privacidade descreve como os aplicativos abrangidos nesta página, desenvolvidos por <strong>Adão L. L. Couto</strong>, tratam informações inseridas ou manipuladas durante o uso.
+      </p>
+      <p>
+        Ao utilizar o software, o usuário declara estar ciente dos termos desta política.
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Coleta de informações pessoais</h2>
+      <p>
+        Este software não coleta dados pessoais dos usuários.
+      </p>
+      <p>
+        Nenhuma informação pessoal identificável é solicitada, coletada, transmitida ou armazenada pelo desenvolvedor, incluindo,
+        mas não se limitando a:
+      </p>
       <ul>
         <li>nome;</li>
         <li>e-mail;</li>
         <li>telefone;</li>
         <li>endereço;</li>
-        <li>CPF ou outros documentos;</li>
+        <li>CPF, documentos ou identificadores civis;</li>
         <li>localização;</li>
         <li>contatos;</li>
-        <li>fotografias;</li>
-        <li>arquivos pessoais;</li>
+        <li>fotografias, vídeos ou arquivos pessoais;</li>
         <li>dados biométricos;</li>
         <li>informações financeiras;</li>
         <li>identificadores pessoais do dispositivo;</li>
-        <li>dados de prontuário;</li>
-        <li>qualquer informação destinada a identificar diretamente uma pessoa.</li>
+        <li>dados de prontuário ou identificação de pacientes.</li>
       </ul>
-      <p>As informações eventualmente digitadas pelo usuário nos campos do software são utilizadas apenas localmente, no próprio dispositivo, para permitir o funcionamento da ferramenta. Esses dados não são enviados ao desenvolvedor, não são armazenados em servidores e não são compartilhados com terceiros.</p>
     </section>
 
     <section>
-      <h2>3. Dados de saúde e informações sensíveis</h2>
-      <p>Este software não solicita identificação de pacientes e não deve ser utilizado para registrar dados pessoais, dados de prontuário, nomes, documentos ou qualquer informação que permita identificar uma pessoa.</p>
-      <p>Caso o usuário insira parâmetros clínicos, valores, medidas, resultados ou informações relacionadas à saúde, esses dados serão processados apenas localmente no dispositivo, para fins de cálculo, consulta, referência ou apoio educacional.</p>
-      <p>O usuário é responsável por não inserir dados identificáveis de pacientes ou de terceiros.</p>
+      <h2>3. Dados clínicos, laboratoriais e informações de saúde</h2>
+      <p>
+        O software pode permitir que o usuário insira parâmetros clínicos, laboratoriais, antropométricos, farmacológicos,
+        de cálculo ou outras informações relacionadas à saúde para fins educacionais, de consulta, cálculo ou apoio à referência médica.
+      </p>
+      <p>
+        Esses dados são processados exclusivamente de forma local, no próprio dispositivo do usuário. Eles não são enviados ao
+        desenvolvedor, não são armazenados em servidores externos, não são compartilhados com terceiros e não são utilizados para
+        identificação de pacientes, criação de perfil do usuário, publicidade, analytics ou qualquer finalidade comercial.
+      </p>
+      <p>
+        O usuário não deve inserir nome, prontuário, documento, telefone, endereço, fotografia ou qualquer outra informação que permita
+        identificar pacientes, familiares, responsáveis, profissionais de saúde ou terceiros.
+      </p>
     </section>
 
     <section>
-      <h2>4. Uso das informações</h2>
-      <p>Como o software não coleta dados pessoais, não há uso de informações pessoais pelo desenvolvedor.</p>
-      <p>Os dados digitados pelo usuário, quando existirem, são utilizados exclusivamente para:</p>
+      <h2>4. Uso das informações inseridas</h2>
+      <p>
+        As informações digitadas pelo usuário são utilizadas apenas para funcionamento interno da ferramenta, incluindo:
+      </p>
       <ul>
-        <li>executar cálculos internos;</li>
-        <li>exibir resultados na tela;</li>
-        <li>permitir a interação com a ferramenta;</li>
-        <li>auxiliar em consulta, estudo, conferência ou referência.</li>
+        <li>realização de cálculos locais;</li>
+        <li>exibição de resultados na tela;</li>
+        <li>consulta, conferência ou apoio educacional;</li>
+        <li>interação com campos, botões, tabelas, alertas ou mensagens internas do próprio software.</li>
       </ul>
-      <p>Essas informações não são transmitidas, analisadas, monitoradas ou utilizadas para criação de perfil do usuário.</p>
+      <p>
+        O desenvolvedor não recebe, analisa, monitora ou utiliza essas informações.
+      </p>
     </section>
 
     <section>
-      <h2>5. Armazenamento de dados</h2>
-      <p>Este software não possui sistema próprio de armazenamento remoto de dados pessoais.</p>
-      <p>Não há banco de dados externo, conta de usuário, área de login ou servidor do desenvolvedor destinado a guardar informações pessoais.</p>
-      <p>Os dados inseridos durante o uso permanecem apenas na sessão local do aplicativo ou da página, conforme o funcionamento do dispositivo e do sistema operacional. O usuário pode limpar os campos, fechar o aplicativo ou reiniciar a ferramenta para remover as informações exibidas na tela.</p>
+      <h2>5. Armazenamento e retenção</h2>
+      <p>
+        O software não possui sistema próprio de cadastro, conta de usuário, banco de dados remoto ou servidor do desenvolvedor para
+        armazenar dados pessoais ou dados clínicos digitados.
+      </p>
+      <p>
+        Os dados eventualmente preenchidos permanecem apenas na sessão local do aplicativo ou da página, conforme o funcionamento do
+        dispositivo, do sistema operacional e da WebView ou navegador utilizado.
+      </p>
+      <p>
+        Para remover informações exibidas na tela, o usuário pode limpar os campos, usar o botão de limpeza quando disponível, fechar o
+        aplicativo ou apagar os dados locais do aplicativo nas configurações do dispositivo, quando aplicável.
+      </p>
     </section>
 
     <section>
       <h2>6. Compartilhamento de dados</h2>
-      <p>Este software não compartilha dados pessoais com terceiros.</p>
+      <p>
+        Este software não compartilha dados pessoais, dados clínicos ou informações digitadas pelo usuário com terceiros.
+      </p>
       <p>Não há compartilhamento com:</p>
       <ul>
         <li>anunciantes;</li>
-        <li>empresas parceiras;</li>
+        <li>redes de publicidade;</li>
         <li>plataformas de marketing;</li>
-        <li>serviços de análise comportamental;</li>
-        <li>redes sociais;</li>
+        <li>ferramentas de analytics;</li>
+        <li>serviços de monitoramento comportamental;</li>
         <li>bancos de dados externos;</li>
         <li>servidores próprios do desenvolvedor;</li>
-        <li>qualquer outro terceiro para fins comerciais.</li>
+        <li>empresas parceiras ou terceiros para fins comerciais.</li>
       </ul>
-      <p>Também não há venda, aluguel, cessão ou transferência de dados pessoais.</p>
+      <p>
+        Também não há venda, aluguel, cessão ou transferência de dados pessoais.
+      </p>
     </section>
 
     <section>
-      <h2>7. Publicidade</h2>
-      <p>Este software não utiliza anúncios personalizados.</p>
-      <p>O software não coleta dados para publicidade, não cria perfil de usuário e não utiliza identificadores de publicidade para rastreamento.</p>
-      <p>Caso uma versão futura venha a utilizar anúncios, esta Política de Privacidade deverá ser atualizada antes da disponibilização dessa versão.</p>
+      <h2>7. Publicidade, analytics e rastreamento</h2>
+      <p>
+        Este software não utiliza anúncios personalizados, redes de publicidade, identificadores de publicidade, cookies, pixels,
+        beacons, scripts de rastreamento, ferramentas de analytics ou relatórios automáticos de comportamento do usuário.
+      </p>
+      <p>
+        O desenvolvedor não recebe informações sobre telas acessadas, campos preenchidos, cálculos realizados, tempo de uso,
+        eventos de navegação ou comportamento do usuário.
+      </p>
+      <p>
+        Caso versão futura venha a utilizar publicidade, analytics, diagnóstico de falhas, servidor externo, banco em nuvem ou SDKs de
+        terceiros, esta Política de Privacidade deverá ser atualizada antes da disponibilização dessa versão.
+      </p>
     </section>
 
     <section>
-      <h2>8. Cookies e tecnologias de rastreamento</h2>
-      <p>Este software não utiliza cookies, pixels, beacons, scripts de rastreamento ou tecnologias semelhantes para monitorar o comportamento dos usuários.</p>
-      <p>Não há rastreamento de navegação, monitoramento de telas acessadas, criação de perfil comportamental ou coleta de estatísticas pessoais de uso pelo desenvolvedor.</p>
-    </section>
-
-    <section>
-      <h2>9. Analytics e relatórios de uso</h2>
-      <p>Este software não utiliza ferramentas de analytics, métricas de uso, rastreamento de eventos ou relatórios automáticos de comportamento do usuário.</p>
-      <p>O desenvolvedor não recebe informações sobre quais campos foram preenchidos, quais cálculos foram realizados, quanto tempo o usuário permaneceu no aplicativo ou quais telas foram acessadas.</p>
-      <p>Caso uma versão futura utilize ferramentas de diagnóstico, estatística ou relatório de falhas, esta Política de Privacidade deverá ser atualizada para informar claramente quais dados serão tratados.</p>
-    </section>
-
-    <section>
-      <h2>10. Permissões do dispositivo</h2>
-      <p>Este software não solicita permissões sensíveis do dispositivo para coleta de informações pessoais.</p>
+      <h2>8. Permissões do dispositivo</h2>
+      <p>
+        Este software não solicita permissões sensíveis do dispositivo para coletar informações pessoais.
+      </p>
       <p>O software não acessa, para fins de coleta de dados pessoais:</p>
       <ul>
         <li>câmera;</li>
         <li>microfone;</li>
         <li>localização;</li>
         <li>contatos;</li>
-        <li>fotos;</li>
-        <li>vídeos;</li>
-        <li>arquivos pessoais;</li>
-        <li>mensagens;</li>
-        <li>chamadas;</li>
+        <li>fotos, vídeos ou arquivos pessoais;</li>
+        <li>mensagens SMS;</li>
+        <li>chamadas telefônicas;</li>
         <li>sensores biométricos;</li>
-        <li>armazenamento externo com finalidade de coleta de dados.</li>
+        <li>Health Connect;</li>
+        <li>dados de outros aplicativos instalados no dispositivo.</li>
       </ul>
-      <p>Caso alguma permissão seja necessária para funcionamento técnico específico em versão futura, ela deverá ser usada apenas para a finalidade informada e esta Política de Privacidade deverá ser atualizada.</p>
+      <p>
+        Caso alguma permissão seja necessária em versão futura, ela deverá ser limitada à finalidade declarada, e esta Política de
+        Privacidade deverá ser atualizada para explicar o acesso, o uso e eventual compartilhamento dos dados relacionados.
+      </p>
     </section>
 
     <section>
-      <h2>11. Serviços de terceiros</h2>
-      <p>Este software não envia dados pessoais para serviços de terceiros controlados pelo desenvolvedor.</p>
-      <p>Entretanto, o uso do aplicativo por meio de lojas de aplicativos, sistemas operacionais ou dispositivos móveis pode envolver serviços externos independentes, como a própria loja de aplicativos, o sistema operacional ou mecanismos de segurança do dispositivo. Esses serviços seguem suas próprias políticas de privacidade, fora do controle direto do desenvolvedor deste software.</p>
-      <p>Esta Política de Privacidade refere-se exclusivamente ao funcionamento do software em si.</p>
+      <h2>9. Serviços de terceiros</h2>
+      <p>
+        Este software não envia dados pessoais ou dados clínicos digitados para serviços de terceiros integrados pelo desenvolvedor.
+      </p>
+      <p>
+        O uso do software por meio de lojas de aplicativos, sistemas operacionais, navegadores ou dispositivos móveis pode envolver
+        serviços externos independentes, como a própria loja de aplicativos, o sistema operacional, mecanismos de segurança do dispositivo
+        ou serviços de distribuição. Esses serviços seguem suas próprias políticas de privacidade e não são controlados por este software.
+      </p>
+      <p>
+        Esta Política de Privacidade refere-se ao funcionamento do software em si.
+      </p>
     </section>
 
     <section>
-      <h2>12. Segurança</h2>
-      <p>Como este software não coleta, transmite ou armazena dados pessoais em servidores do desenvolvedor, o risco de exposição por transmissão externa é reduzido.</p>
-      <p>Ainda assim, a segurança das informações exibidas na tela depende também das práticas do próprio usuário, incluindo:</p>
+      <h2>10. Segurança</h2>
+      <p>
+        Como este software não coleta, transmite ou armazena dados pessoais em servidores do desenvolvedor, o risco de exposição por
+        transmissão externa é reduzido.
+      </p>
+      <p>
+        Ainda assim, a segurança das informações exibidas na tela depende também das práticas do próprio usuário, incluindo:
+      </p>
       <ul>
         <li>manter o dispositivo protegido por senha, biometria ou outro mecanismo de bloqueio;</li>
-        <li>evitar inserir dados pessoais identificáveis;</li>
+        <li>evitar inserir dados identificáveis de pacientes ou terceiros;</li>
         <li>não compartilhar capturas de tela contendo informações sensíveis;</li>
         <li>manter o sistema operacional atualizado;</li>
         <li>utilizar apenas versões oficiais do software.</li>
       </ul>
-      <p>O desenvolvedor não se responsabiliza por exposição de informações causada por uso inadequado do dispositivo, compartilhamento voluntário de dados pelo usuário ou instalação de versões não oficiais.</p>
     </section>
 
     <section>
-      <h2>13. Crianças e adolescentes</h2>
-      <p>Este software não coleta intencionalmente informações de crianças, adolescentes ou quaisquer outros usuários.</p>
-      <p>O software não possui recursos de cadastro, mensagens, perfil público, interação social ou coleta de dados pessoais de menores de idade.</p>
-      <p>Caso o software seja utilizado por menores, recomenda-se supervisão de pais, responsáveis ou profissionais habilitados, conforme a natureza do conteúdo apresentado.</p>
+      <h2>11. Crianças e adolescentes</h2>
+      <p>
+        Este software não coleta intencionalmente informações de crianças, adolescentes ou quaisquer outros usuários.
+      </p>
+      <p>
+        O software não possui cadastro, perfil público, mensagens, rede social, comunicação entre usuários ou coleta de dados pessoais de menores.
+      </p>
+      <p>
+        Caso o software seja utilizado por menores, recomenda-se supervisão de pais, responsáveis ou profissionais habilitados, conforme
+        a natureza do conteúdo apresentado.
+      </p>
     </section>
 
     <section>
-      <h2>14. Direitos do usuário</h2>
-      <p>Como o software não coleta nem armazena dados pessoais em servidores do desenvolvedor, não há banco de dados pessoal mantido pelo desenvolvedor para consulta, correção, portabilidade ou exclusão.</p>
-      <p>Ainda assim, o usuário pode entrar em contato para esclarecer dúvidas sobre privacidade, funcionamento do software ou tratamento de informações.</p>
-      <p>Quando aplicável, o usuário poderá solicitar informações sobre eventual tratamento de dados pessoais, conforme a legislação vigente.</p>
+      <h2>12. Direitos do usuário e exclusão de dados</h2>
+      <p>
+        Como o software não coleta nem armazena dados pessoais em servidores do desenvolvedor, não há banco de dados pessoal mantido pelo
+        desenvolvedor para consulta, correção, portabilidade ou exclusão.
+      </p>
+      <p>
+        O software não possui conta de usuário. Portanto, não há conta associada ao usuário mantida pelo desenvolvedor para exclusão.
+      </p>
+      <p>
+        Para remover informações digitadas durante o uso, o usuário pode limpar os campos, fechar o aplicativo ou apagar os dados locais
+        do aplicativo nas configurações do dispositivo, quando aplicável.
+      </p>
     </section>
 
     <section>
-      <h2>15. Exclusão de dados</h2>
-      <p>Este software não possui conta de usuário nem armazenamento remoto de dados pessoais.</p>
-      <p>Portanto, não há conta ou banco de dados pessoal mantido pelo desenvolvedor para exclusão.</p>
-      <p>Para remover informações digitadas durante o uso, o usuário pode limpar os campos, fechar o aplicativo ou apagar os dados locais do aplicativo nas configurações do dispositivo, quando aplicável.</p>
+      <h2>13. Alterações desta Política de Privacidade</h2>
+      <p>
+        Esta Política de Privacidade poderá ser atualizada para refletir mudanças no funcionamento do software, exigências legais, políticas
+        de lojas de aplicativos ou inclusão de novos recursos.
+      </p>
+      <p>
+        Caso versões futuras passem a coletar, transmitir, armazenar ou compartilhar qualquer dado pessoal ou sensível, esta política deverá
+        ser revisada antes da disponibilização da nova versão.
+      </p>
+      <p>
+        A versão mais recente desta Política de Privacidade deverá estar sempre disponível em URL pública e acessível ao usuário.
+      </p>
+    </section>
+
+    <section class="warning">
+      <h2>14. Declaração sobre finalidade médica</h2>
+      <p>
+        Os aplicativos abrangidos por esta política são ferramentas educacionais e de apoio à referência médica. Ele não realiza diagnóstico automático, não substitui
+        avaliação médica, não substitui protocolos institucionais e não deve ser utilizado isoladamente para tomada de decisão clínica.
+      </p>
+      <p>
+        Qualquer resultado exibido deve ser conferido pelo profissional de saúde responsável, considerando o quadro clínico, exame físico,
+        dados laboratoriais, contexto assistencial, protocolos locais e demais informações relevantes.
+      </p>
+    </section>
+
+    <section class="disclaimer">
+      <h2>15. Aviso Legal e Isenção de Responsabilidade</h2>
+      <p>
+        Este software e todas as informações nele contidas são fornecidos exclusivamente com propósitos educacionais e de auxílio à referência médica.
+        ESTE SISTEMA NÃO SUBSTITUI O JULGAMENTO CLÍNICO INDIVIDUAL, A ANAMNESE E O EXAME FÍSICO. As informações aqui apresentadas não devem ser
+        utilizadas isoladamente para o diagnóstico, conduta ou tratamento de pacientes. A responsabilidade final por qualquer decisão clínica,
+        prescrição ou intervenção é exclusiva do profissional de saúde assistente, devidamente habilitado.
+      </p>
+      <p>
+        Os desenvolvedores não garantem a precisão absoluta de todos os dados e isentam-se de responsabilidade por quaisquer danos diretos,
+        indiretos, materiais ou morais que resultem do uso inadequado, interpretação equivocada ou confiança exclusiva nas informações deste sistema.
+      </p>
+      <p>
+        Pacientes e indivíduos leigos que utilizarem este software devem sempre buscar a orientação de um médico qualificado antes de tomar qualquer
+        decisão sobre sua saúde.
+      </p>
     </section>
 
     <section>
-      <h2>16. Alterações desta Política de Privacidade</h2>
-      <p>Esta Política de Privacidade poderá ser atualizada periodicamente para refletir mudanças no funcionamento do software, em exigências legais, em políticas de lojas de aplicativos ou em recursos eventualmente adicionados.</p>
-      <p>Caso futuras versões passem a coletar, armazenar, transmitir ou compartilhar qualquer tipo de dado pessoal, esta política deverá ser revisada antes da disponibilização da nova versão.</p>
-      <p>A versão mais recente desta Política de Privacidade deverá estar sempre disponível em local acessível ao usuário.</p>
+      <h2>16. Contato</h2>
+      <p>
+        Em caso de dúvidas sobre esta Política de Privacidade, privacidade de dados ou funcionamento dos aplicativos,
+        o usuário poderá entrar em contato diretamente com o desenvolvedor.
+      </p>
+      <p>
+        <strong>Desenvolvedor:</strong> Adão L. L. Couto<br />
+        <strong>E-mail:</strong> <a href="mailto:adaocouto10@gmail.com">adaocouto10@gmail.com</a>
+      </p>
     </section>
 
-    <section class="aviso">
-      <h2>17. Aviso Legal e Isenção de Responsabilidade</h2>
-      <p>Este software e todas as informações nele contidas são fornecidos exclusivamente com propósitos educacionais e de auxílio à referência médica. ESTE SISTEMA NÃO SUBSTITUI O JULGAMENTO CLÍNICO INDIVIDUAL, A ANAMNESE E O EXAME FÍSICO. As informações aqui apresentadas não devem ser utilizadas isoladamente para o diagnóstico, conduta ou tratamento de pacientes. A responsabilidade final por qualquer decisão clínica, prescrição ou intervenção é exclusiva do profissional de saúde assistente, devidamente habilitado.</p>
-      <p>Os desenvolvedores não garantem a precisão absoluta de todos os dados e isentam-se de responsabilidade por quaisquer danos diretos, indiretos, materiais ou morais que resultem do uso inadequado, interpretação equivocada ou confiança exclusiva nas informações deste sistema.</p>
-      <p>Pacientes e indivíduos leigos que utilizarem este software devem sempre buscar a orientação de um médico qualificado antes de tomar qualquer decisão sobre sua saúde.</p>
-    </section>
-
-    <section>
-      <h2>18. Contato</h2>
-      <p>Em caso de dúvidas sobre esta Política de Privacidade, privacidade de dados ou funcionamento do software, o usuário poderá entrar em contato pelo e-mail informado na página do desenvolvedor ou na loja de aplicativos.</p>
-    </section>
-
-    <p class="rodape">
-      Política de Privacidade<br />
-      Última atualização: junho de 2026
+    <p class="footer">
+      Política de Privacidade dos aplicativos de Adão L. L. Couto<br />
+      Última atualização: 25 de agosto de 2026<br />
+      Contato: <a href="mailto:adaocouto10@gmail.com">adaocouto10@gmail.com</a>
     </p>
   </main>
 </body>
