@@ -1,3 +1,6 @@
+<!-- NomeDoApp = "Política de Privacidade" -->
+<!-- AndroidVersionName = "1.11.10.11"; VersionName = "1.11.10.11" -->
+<!-- AndroidVersionCode = "262841015"; VersionCode = "262841015"; Timestamp = "2026-10-11T09:58:07-03:00" -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,20 +10,33 @@
   <meta name="description" content="Política de Privacidade para aplicativos educacionais e ferramentas de referência médica publicados por Adão Luiz Lopes Couto na Google Play Store." />
   <style>
     :root{--azul:#1a3a6b;--azul2:#2563a8;--azulclaro:#eff6ff;--fundo:#e8f0fe;--card:#fff;--texto:#1e293b;--muted:#64748b;--borda:#cbd5e1;--okbg:#dcfce7;--ok:#166534;--warnbg:#fffbeb;--warnborder:#facc15;--warn:#78350f}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Segoe UI",Roboto,Arial,sans-serif;background:var(--fundo);color:var(--texto);line-height:1.7;padding:24px 16px 48px}main{max-width:980px;margin:0 auto}header{background:linear-gradient(135deg,var(--azul),var(--azul2));color:#fff;border-radius:24px;padding:32px 24px;box-shadow:0 16px 34px rgba(18,44,73,.18);margin-bottom:18px;text-align:center}header h1{margin:0;font-size:clamp(1.9rem,5vw,2.7rem);line-height:1.15;letter-spacing:-.5px}header p{margin:10px 0 0;font-size:1rem;opacity:.94}.language-box{background:var(--card);border:1px solid var(--borda);border-radius:18px;padding:14px;margin:14px 0;box-shadow:0 8px 20px rgba(18,44,73,.08);text-align:center;position:sticky;top:8px;z-index:5}.language-box strong{color:var(--azul);margin-right:8px}.lang-button{display:inline-block;margin:4px 6px;padding:8px 14px;border-radius:999px;border:1px solid #bfdbfe;background:var(--azulclaro);color:var(--azul);font-weight:700;cursor:pointer}.lang-button.active{background:var(--azul);color:#fff;border-color:var(--azul)}section,nav.toc{background:var(--card);border:1px solid var(--borda);border-radius:18px;padding:22px;margin:14px 0;box-shadow:0 8px 20px rgba(18,44,73,.08)}.summary-card{background:#f8fbff;border-color:#bfdbfe}h2{color:var(--azul);font-size:1.18rem;margin:0 0 10px;line-height:1.25}p{margin:0 0 12px}ul,ol{margin:8px 0 12px;padding-left:22px}li{margin-bottom:6px}a{color:var(--azul2);font-weight:700;word-break:break-word}.badge{display:inline-block;border-radius:999px;padding:6px 12px;font-size:.82rem;font-weight:700;margin:4px 8px 4px 0;background:var(--okbg);color:var(--ok);border:1px solid #86efac}.aviso{background:var(--warnbg);border:1.5px solid var(--warnborder);color:var(--warn)}.aviso h2{color:var(--warn)}.top-link{display:inline-block;margin-top:8px;font-size:.9rem;text-decoration:none;color:var(--azul);font-weight:700}.rodape{text-align:center;color:var(--muted);font-size:.92rem;margin-top:22px}.language-content{display:none}.language-content.active{display:block}@media(max-width:640px){body{padding:16px 12px 36px}header,.language-box,section,nav.toc{border-radius:16px}section,nav.toc{padding:18px}.language-box{position:static}}@media print{body{background:#fff;padding:0}header,.language-box,section,nav.toc{box-shadow:none}.language-box,.top-link{display:none}.language-content{display:block}}
+
+    /* Rodapé padronizado com a página Meus Aplicativos */
+    .site-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
+    .site-link{display:flex;align-items:center;justify-content:center;min-height:48px;padding:12px 16px;border:1px solid #b9cce0;border-radius:12px;background:#fff;color:#173a6d;font-size:.9rem;font-weight:800;text-align:center;text-decoration:none;box-shadow:0 12px 30px rgba(23,58,109,.08)}
+    .site-link:hover{background:#eaf2fb;border-color:#2563a8}
+    .legal-disclaimer{margin-top:16px;padding:0;border:1px solid #e2e8f0;border-radius:14px;background:#f8fafc;box-shadow:none;color:#64748b;font-size:.76rem;line-height:1.45;text-align:left;overflow:hidden}
+    .legal-disclaimer > summary{list-style:none;cursor:pointer;position:relative;padding:11px 38px 11px 13px;color:#5c6f87;font-size:.78rem;font-weight:700;user-select:none}
+    .legal-disclaimer > summary::-webkit-details-marker{display:none}
+    .legal-disclaimer > summary::after{content:'＋';position:absolute;right:13px;top:50%;transform:translateY(-50%);color:#7b8da0;font-size:.9rem;font-weight:800}
+    .legal-disclaimer[open] > summary::after{content:'−'}
+    .legal-disclaimer-content{padding:11px 13px 12px;border-top:1px solid #edf2f7;text-align:justify;overflow-wrap:anywhere}
+    .signature-block{text-align:center;color:#5c6f87;font-size:14px;line-height:1.5;margin-top:12px}
+    .spacer-3lines{height:4.2em}
+    @media(max-width:720px){.site-links{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <main id="topo">
     <header>
-      <h1>Política de Privacidade</h1>
-      <p>Última atualização: 30 de agosto de 2026</p>
-      <p>Last updated: August 30, 2026</p>
+      <h1 id="pageTitle">Política de Privacidade</h1>
+      <p id="headerUpdated">Última atualização: 11 de outubro de 2026</p>
     </header>
 
-    <div class="language-box" aria-label="Seletor de idioma">
-      <strong>Idioma:</strong>
-      <button class="lang-button active" type="button" onclick="setLanguage('pt')">Português</button>
-      <button class="lang-button" type="button" onclick="setLanguage('en')">Inglês</button>
+    <div class="language-box" id="languageSelector" aria-label="Seletor de idioma">
+      <strong id="languageLabel">Idioma:</strong>
+      <button class="lang-button active" type="button" onclick="setLanguage('pt')" aria-pressed="true">Português</button>
+      <button class="lang-button" type="button" onclick="setLanguage('en')" aria-pressed="false">Inglês</button>
     </div>
 
     <div id="content-pt" class="language-content active" lang="pt-BR">
@@ -86,10 +102,77 @@
       <section id="en-contact"><h2>16. Contact</h2><p><strong>Contact for privacy, support, and application-related matters:</strong><br><a href="mailto:adaocouto10@gmail.com">adaocouto10@gmail.com</a></p><p><strong>Institutional contact and partnerships:</strong><br>Adão Luiz Lopes Couto<br>Email: <a href="mailto:adaocouto@yahoo.com.br">adaocouto@yahoo.com.br</a><br>Phone: <a href="tel:+5522974058656">+55 22 97405-8656</a></p><a class="top-link" href="#topo">↑ Back to top</a></section>
     </div>
 
-    <p class="rodape">Política de Privacidade / Privacy Policy<br>Aplicativos publicados por Adão Luiz Lopes Couto na Google Play Store<br>Última atualização: 30 de agosto de 2026 / Last updated: August 30, 2026</p>
+    <p class="rodape"><span id="footerTitle">Política de Privacidade</span><br><span id="footerPublisher">Aplicativos publicados por Adão Luiz Lopes Couto</span><br><span id="footerUpdated">Última atualização: 11 de outubro de 2026</span></p>
+
+    <nav class="site-links" id="footerNav" aria-label="Informações e privacidade">
+      <a class="site-link" id="aboutLink" href="https://adaocouto.github.io/eu/" target="_blank" rel="noopener noreferrer">Sobre mim</a>
+      <a class="site-link" id="privacyLink" href="https://adaocouto.github.io/pp/" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>
+    </nav>
+
+
+    <div class="signature-block"><span class="version-name">1.11.10.11</span></div>
+
+    <div class="spacer-3lines" aria-hidden="true"></div>
   </main>
   <script>
-    function setLanguage(lang){const pt=document.getElementById('content-pt');const en=document.getElementById('content-en');const buttons=document.querySelectorAll('.lang-button');if(lang==='en'){pt.classList.remove('active');en.classList.add('active');document.documentElement.lang='en'}else{en.classList.remove('active');pt.classList.add('active');document.documentElement.lang='pt-BR'}buttons.forEach(b=>b.classList.remove('active'));const active=lang==='en'?buttons[1]:buttons[0];if(active)active.classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+    const translatedUI = {
+      pt: {
+        title: 'Política de Privacidade',
+        updated: 'Última atualização: 11 de outubro de 2026',
+        language: 'Idioma:',
+        publisher: 'Aplicativos publicados por Adão Luiz Lopes Couto',
+        about: 'Sobre mim',
+        privacy: 'Política de Privacidade',
+        navigation: 'Informações e privacidade',
+        selector: 'Seletor de idioma',
+        ptButton: 'Português',
+        enButton: 'Inglês'
+      },
+      en: {
+        title: 'Privacy Policy',
+        updated: 'Last updated: October 11, 2026',
+        language: 'Language:',
+        publisher: 'Applications published by Adão Luiz Lopes Couto',
+        about: 'About me',
+        privacy: 'Privacy Policy',
+        navigation: 'Information and privacy',
+        selector: 'Language selector',
+        ptButton: 'Portuguese',
+        enButton: 'English'
+      }
+    };
+
+    function setLanguage(lang) {
+      const language = lang === 'en' ? 'en' : 'pt';
+      const copy = translatedUI[language];
+      const english = language === 'en';
+      const ptContent = document.getElementById('content-pt');
+      const enContent = document.getElementById('content-en');
+      ptContent.classList.toggle('active', !english);
+      enContent.classList.toggle('active', english);
+      document.documentElement.lang = english ? 'en' : 'pt-BR';
+      document.title = copy.title;
+
+      document.getElementById('pageTitle').textContent = copy.title;
+      document.getElementById('headerUpdated').textContent = copy.updated;
+      document.getElementById('languageLabel').textContent = copy.language;
+      document.getElementById('footerTitle').textContent = copy.title;
+      document.getElementById('footerPublisher').textContent = copy.publisher;
+      document.getElementById('footerUpdated').textContent = copy.updated;
+      document.getElementById('aboutLink').textContent = copy.about;
+      document.getElementById('privacyLink').textContent = copy.privacy;
+      document.getElementById('footerNav').setAttribute('aria-label', copy.navigation);
+      document.getElementById('languageSelector').setAttribute('aria-label', copy.selector);
+
+      const buttons = document.querySelectorAll('.lang-button');
+      buttons.forEach((button, index) => {
+        button.textContent = index === 0 ? copy.ptButton : copy.enButton;
+        const active = index === (english ? 1 : 0);
+        button.classList.toggle('active', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
   </script>
 </body>
 </html>
